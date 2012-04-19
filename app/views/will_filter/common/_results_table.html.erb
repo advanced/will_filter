@@ -37,7 +37,7 @@
 
          style << "width:15px" if key == :checkbox
     %>
-        <% unless  ['Created At', 'Updated At', 'Id','comment','description','size_description','supplier_id'].include?(column_title.to_s)%>
+        <% unless  ['Created At', 'Updated At', 'Id','Comment','Description','Size Description','Supplier Id'].include?(column_title.to_s)%>
 
             <th class="<%= the_class_name %>" style="<%=style%>">
               <div class="table_head_container">
