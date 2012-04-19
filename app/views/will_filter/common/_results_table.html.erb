@@ -29,7 +29,7 @@
          style = ""
          sort_direction       = filter.column_sorted?(key) ? filter.order_type : "asc"
          sort_direction_click = filter.column_sorted?(key) ? (sort_direction == "asc" ? "desc" : "asc") : "asc"
-         column_title   = key.to_s
+         column_title   = filter.condition_title_for(key)
          the_class_name =  key.to_s
          the_class_name << " sortable"                 if filter.contains_column?(key)
          the_class_name << " current_sort"             if filter.column_sorted?(key)
@@ -37,7 +37,7 @@
 
          style << "width:15px" if key == :checkbox
     %>
-        <% unless  ['Created Atc', 'Updated Atc', 'Idc'].include?(column_title.to_s)%>
+        <% unless  ['Created At', 'Updated At', 'Id','comment','description','size_description','supplier_id'].include?(column_title.to_s)%>
 
             <th class="<%= the_class_name %>" style="<%=style%>">
               <div class="table_head_container">
