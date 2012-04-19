@@ -29,7 +29,7 @@
          style = ""
          sort_direction       = filter.column_sorted?(key) ? filter.order_type : "asc"
          sort_direction_click = filter.column_sorted?(key) ? (sort_direction == "asc" ? "desc" : "asc") : "asc"
-         column_title   = filter.condition_title_for(key)
+         column_title   = key.to_s
          the_class_name =  key.to_s
          the_class_name << " sortable"                 if filter.contains_column?(key)
          the_class_name << " current_sort"             if filter.column_sorted?(key)
