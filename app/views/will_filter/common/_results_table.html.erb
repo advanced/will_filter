@@ -62,7 +62,7 @@
   </thead>
   <tbody>
   <% results.each_with_index do |obj, index| %>
-      <%= results%>
+      <%= obj %>
       <tr class='data_row <%=(index % 2 == 0) ? "wf_row_even" : "wf_row_odd"%>'>
         <% opts[:columns].each_with_index do |column, column_index| %>
             <%
